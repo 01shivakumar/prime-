@@ -1,0 +1,37 @@
+package prime;
+
+import java.util.Scanner;
+
+public class prine2 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter frist number");
+		
+		int S=sc.nextInt();
+		System.out.println("entersecond number");
+		
+		int E=sc.nextInt();
+		System.out.println("eList of prime numbers");
+		for(int i=S; i<=E; i++) {
+			if(isPrime(i)) {
+				System.out.println(i);
+			}
+		}
+
+	}
+	
+	
+	public static boolean isPrime(int n) {
+		if(n<=1) {
+			return false;
+		}
+		for (int i =2; i<=Math.sqrt(n); i++) {
+			if(n %i==0) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+}
